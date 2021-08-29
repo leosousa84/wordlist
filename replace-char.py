@@ -19,9 +19,9 @@ def strip_accents(text):
 arquivo = sys.argv[1]
 
 palavra = open(arquivo, 'r')
-with open(arquivo, mode='r', encoding='ascii') as f:
+with open(arquivo, mode='r') as f:
     for i in f:
         s = strip_accents(i)
-        linew = open('wl-novo', mode='a+', encoding='utf-8')
+        linew = open('wl-novo', mode='a+', encoding='ascii')
         linew.writelines(s)
         print(s)
